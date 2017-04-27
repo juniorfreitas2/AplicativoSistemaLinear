@@ -8,7 +8,7 @@ import {Validators, FormBuilder } from '@angular/forms';
 })
 export class HomePage {
     cadastro: any = {};
-
+    mostrar: boolean= false;
   constructor(public navCtrl: NavController, public FormBuilder: FormBuilder) {
     this.cadastro = this.FormBuilder.group({
       linha:['',Validators.required],

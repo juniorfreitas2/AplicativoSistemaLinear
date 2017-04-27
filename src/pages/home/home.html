@@ -8,21 +8,38 @@
 </ion-header>
 
 <ion-content >
-  <h2>Cadastro</h2>
+  <h5>Selecione as dimensões da matriz</h5>
+ <br><br>
   <form [formGroup]="cadastro" (ngSubmit)="postDados(cadastro)" >
     <ion-grid>
       <ion-row align-items-start>
         <ion-col>
-           <ion-item>
-              <ion-label floating>Linha </ion-label>
-               <ion-input type="text" name="linha" formControlName="linha"> </ion-input>
+           <ion-item> 
+              <ion-label>Linha</ion-label> 
+                <ion-select formControlName="linha" [(ngModel)]="Linha"> 
+                  <ion-option value="1">1</ion-option>
+                  <ion-option value="2">2</ion-option>
+                  <ion-option value="3">3</ion-option>
+                  <ion-option value="4">4</ion-option>
+                  <ion-option value="5">5</ion-option>
+                  <ion-option value="6">6</ion-option>
+                  <ion-option value="7">7</ion-option> 
+                </ion-select> 
             </ion-item>
         </ion-col>
         <ion-col>
           <ion-item> 
-             <ion-label floating>Coluna </ion-label>
-             <ion-input type="email" name="coluna"  formControlName="coluna"> </ion-input>
-         </ion-item>  
+              <ion-label>Coluna</ion-label> 
+                <ion-select formControlName="coluna" [(ngModel)]="Coluna"> 
+                  <ion-option value="1">1</ion-option>
+                  <ion-option value="2">2</ion-option>
+                  <ion-option value="3">3</ion-option>
+                  <ion-option value="4">4</ion-option>
+                  <ion-option value="5">5</ion-option>
+                  <ion-option value="6">6</ion-option>
+                  <ion-option value="7">7</ion-option> 
+                </ion-select> 
+            </ion-item> 
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -30,5 +47,6 @@
        <button [disabled]="cadastro.invalid" ion-button full block color="danger">Criar Matriz</button>
   </form>
  
+
 
 </ion-content>
