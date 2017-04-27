@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { ModalController, NavParams, NavController  } from 'ionic-angular';
 import {Validators, FormBuilder } from '@angular/forms';
+import { Modal } from '../modal/modal';
 
 @Component({
   selector: 'page-home',
@@ -9,7 +10,7 @@ import {Validators, FormBuilder } from '@angular/forms';
 export class HomePage {
     cadastro: any = {};
     mostrar: boolean= false;
-  constructor(public navCtrl: NavController, public FormBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public FormBuilder: FormBuilder,public modalCtrl: ModalController) {
     this.cadastro = this.FormBuilder.group({
       linha:['',Validators.required],
       coluna:['',Validators.required]
@@ -24,6 +25,11 @@ export class HomePage {
     cadastro.value.linha;
     cadastro.value.coluna;
     console.log(cadastro);
+  }
+
+  presentModal() {
+    let modal = this.modalCtrl.create(Modal, { userId: 8675309 }  );
+    modal.present();
   }
 
 }
