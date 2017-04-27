@@ -8,17 +8,22 @@ import {Validators, FormBuilder } from '@angular/forms';
 })
 export class HomePage {
     cadastro: any = {};
-	  teste: string="Hello World";
-    mostrar: boolean = false;
+
   constructor(public navCtrl: NavController, public FormBuilder: FormBuilder) {
     this.cadastro = this.FormBuilder.group({
-      nome:['',Validators.required],
-      email:['',Validators.required],
-      senha:['',Validators.required]
+      linha:['',Validators.required],
+      coluna:['',Validators.required]
     });
   }
+
   alteraBoolean(){
       this.mostrar =  !this.mostrar;
+  }
+
+  postDados(cadastro){
+    cadastro.value.linha;
+    cadastro.value.coluna;
+    console.log(cadastro);
   }
 
 }

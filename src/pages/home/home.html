@@ -8,30 +8,27 @@
 </ion-header>
 
 <ion-content >
-  <!--Start Two Data Binding  -->
-    <!-- <ion-input name="nome" type="text" [(ngModel)]="binding"></ion-input>
-    {{binding}} -->
-  <!--end Two Data Binding -->
   <h2>Cadastro</h2>
-  <form [formGroup]="cadastro" (ngSubmit)="postDados()" >
-    <ion-item>
-        <ion-label floating>Nome </ion-label>
-        <ion-input type="text" name="nome" formControlName="nome"> </ion-input>
-     </ion-item>
-     <ion-item>
-         <ion-label floating>Email </ion-label>
-         <ion-input type="email" name="Email"  formControlName="email"> </ion-input>
-      </ion-item>
-      <ion-item>
-          <ion-label floating>Senha </ion-label>
-          <ion-input type="password" name="Senha"  formControlName="senha"> </ion-input>
-       </ion-item>
-       <ion-item>
-           <button [disabled]="cadastro.invalid" ion-button full block color="danger">Enviar</button>
-        </ion-item>
-  </form>
+  <form [formGroup]="cadastro" (ngSubmit)="postDados(cadastro)" >
+    <ion-grid>
+      <ion-row align-items-start>
+        <ion-col>
+           <ion-item>
+              <ion-label floating>Linha </ion-label>
+               <ion-input type="text" name="linha" formControlName="linha"> </ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item> 
+             <ion-label floating>Coluna </ion-label>
+             <ion-input type="email" name="coluna"  formControlName="coluna"> </ion-input>
+         </ion-item>  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <p *ngIf="mostrar">  {{ teste }}  </p>
-  <button ion-button (click)="alteraBoolean()"> Click-me</button>
+       <button [disabled]="cadastro.invalid" ion-button full block color="danger">Criar Matriz</button>
+  </form>
+ 
 
 </ion-content>
