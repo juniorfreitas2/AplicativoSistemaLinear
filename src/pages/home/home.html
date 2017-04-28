@@ -10,45 +10,45 @@
 <ion-content >
   <h5>Selecione as dimensões da matriz</h5>
  <br><br>
-  <form [formGroup]="cadastro" (ngSubmit)="postDados(cadastro)" >
+  <form [formGroup]="cadastro" (ngSubmit)="presentModal(cadastro)" >
     <ion-grid>
       <ion-row align-items-start>
         <ion-col>
-           <ion-item> 
-              <ion-label>Linha</ion-label> 
-                <ion-select formControlName="linha" [(ngModel)]="Linha"> 
+           <ion-item>
+              <ion-label>Linha</ion-label>
+                <ion-select formControlName="linha" [(ngModel)]="Linha">
                   <ion-option value="1">1</ion-option>
                   <ion-option value="2">2</ion-option>
                   <ion-option value="3">3</ion-option>
                   <ion-option value="4">4</ion-option>
                   <ion-option value="5">5</ion-option>
                   <ion-option value="6">6</ion-option>
-                  <ion-option value="7">7</ion-option> 
-                </ion-select> 
+                  <ion-option value="7">7</ion-option>
+                </ion-select>
             </ion-item>
         </ion-col>
         <ion-col>
-          <ion-item> 
-              <ion-label>Coluna</ion-label> 
-                <ion-select formControlName="coluna" [(ngModel)]="Coluna"> 
+          <ion-item>
+              <ion-label>Coluna</ion-label>
+                <ion-select formControlName="coluna" [(ngModel)]="Coluna">
                   <ion-option value="1">1</ion-option>
                   <ion-option value="2">2</ion-option>
                   <ion-option value="3">3</ion-option>
                   <ion-option value="4">4</ion-option>
                   <ion-option value="5">5</ion-option>
                   <ion-option value="6">6</ion-option>
-                  <ion-option value="7">7</ion-option> 
-                </ion-select> 
-            </ion-item> 
+                  <ion-option value="7">7</ion-option>
+                </ion-select>
+            </ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
 
-       <button [disabled]="cadastro.invalid" ion-button full block color="danger">Criar Matriz</button>
-      <button ion-button full block (click)="presentModal()">show  Modal</button>
-        
+       <!-- <button  ion-button full block color="danger">Criar Matriz</button> -->
+      <button [disabled]="cadastro.invalid" ion-button full block >show  Modal</button>
+
   </form>
- 
+
 
 
 </ion-content>

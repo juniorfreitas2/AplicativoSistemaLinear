@@ -10,6 +10,7 @@ import { Modal } from '../modal/modal';
 export class HomePage {
     cadastro: any = {};
     mostrar: boolean= false;
+
   constructor(public navCtrl: NavController, public FormBuilder: FormBuilder,public modalCtrl: ModalController) {
     this.cadastro = this.FormBuilder.group({
       linha:['',Validators.required],
@@ -24,11 +25,10 @@ export class HomePage {
   postDados(cadastro){
     cadastro.value.linha;
     cadastro.value.coluna;
-    console.log(cadastro);
   }
 
-  presentModal() {
-    let modal = this.modalCtrl.create(Modal, { userId: 8675309 }  );
+  presentModal(cadastro) {
+    let modal = this.modalCtrl.create(Modal,cadastro.value);
     modal.present();
   }
 
