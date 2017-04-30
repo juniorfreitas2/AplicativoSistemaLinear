@@ -13,8 +13,20 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public FormBuilder: FormBuilder,public modalCtrl: ModalController) {
     this.cadastro = this.FormBuilder.group({
-      linha:['',Validators.required],
-      coluna:['',Validators.required]
+      x1:['',Validators.required],
+      y1:['',Validators.required],
+      z1:['',Validators.required],
+      resultado1:['',Validators.required],
+
+      x2:['',Validators.required],
+      y2:['',Validators.required],
+      z2:['',Validators.required],
+      resultado2:['',Validators.required],
+
+      x3:['',Validators.required],
+      y3:['',Validators.required],
+      z3:['',Validators.required],
+      resultado3:['',Validators.required]
     });
   }
 
