@@ -12,20 +12,15 @@ export class Modal {
     a: number = Number(this.navParams.get('x1'));
     b: number = Number(this.navParams.get('y1'));
     c: number = Number(this.navParams.get('resultado1'));
-
     d: number = Number(this.navParams.get('x2'));
     e: number = Number(this.navParams.get('y2'));
     f: number = Number(this.navParams.get('resultado2'));
-
     x:number = 0 ; y :number = 0;
 
-    a1; b1; d1; e1;//variáveis auxiliares para escrever o  sistema na tela
+    //variáveis auxiliares para escrever o  sistema na tela
+    a1; b1; d1; e1;
     sinala:string; sinalb:string; sinald:string; sinale:string;
-    ax:string="x";
-    by:string="y";
-    dx:string="x";
-    ey:string="y";
-    result: string;
+    ax:string="x"; by:string="y"; dx:string="x"; ey:string="y"; result: string; result2: string;
 
     constructor(public navParams: NavParams,public viewCtrl: ViewController) {
         this.resolverSistema();
@@ -37,9 +32,7 @@ export class Modal {
 
     resolverSistema(){
         if(this.a==0 && this.b==0 && this.d==0 && this.e==0) {
-            //
-            //     alert("Coloque valores diferentes de zero para as incognitas"); }
-            //
+            this.result = "Coloque valores diferentes de zero para as incognitas";
         }
         else{
                 this.d1=this.d; this.a1= this.a;
@@ -68,6 +61,9 @@ export class Modal {
 
                     this.y = (this.f * this.a - this.d *this.c ) / (this.a * this.e - this.d * this.b);
                     this.x = (this.c - this.b * this.y) / this.a;
+
+                    this.result2 = "Solução do sistema: X ="+this.x+" e Y =" +this.y;
+
                 }
                 else{
                     if((this.f * this.a - this.d * this.c) !=0 && (this.a * this.e -this.d *this.b)==0){
@@ -80,11 +76,6 @@ export class Modal {
                 }
             }
 
-            // //Calculo de X e Y
-            // this.y = (this.f * this.a - this.d * this.c) / (this.a * this.e - this.d * this.b);
-            // this.x = (this.c - this.b * this.y) / this.a;
-
         }
-
 
     }

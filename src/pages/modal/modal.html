@@ -1,31 +1,19 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>
-      Resultado
-    </ion-title>
-
-    <ion-buttons end>
-      <button ion-button icon-only (click)="closeModal()">
-        <ion-icon name="close-circle"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
-
+    <ion-navbar>
+        <ion-title> Resultado </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="closeModal()">
+                <ion-icon name="close-circle"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding class="sample-modal-page">
-
-
     <br>
     {{this.a1 }}<i> {{this.ax }} </i>  {{this.sinalb + this.b1 }}  <i>{{this.by }} </i> = {{this.c }}  <br>
     {{this.d1}} <i>{{this.dx}}</i>{{this.sinale}} {{this.e1}} <i>{{this.ey }} </i> = {{this.f }}<br>
     <br><br>
-    {{
-        if(result){
-            result
-        }else{
-            Solução do sistema: X = {{x}} e y = {{y}}
-        }
-    }}
+    {{result}}
+    {{result2}}
 </ion-content>
