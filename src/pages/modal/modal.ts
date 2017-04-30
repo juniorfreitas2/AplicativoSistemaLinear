@@ -22,8 +22,9 @@ export class Modal {
     this.viewCtrl.dismiss();
   }
 
+  resolverSistema(){
 
-
+  }
 
 
 }
