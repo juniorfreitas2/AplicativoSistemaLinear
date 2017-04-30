@@ -34,11 +34,6 @@ export class HomePage {
       this.mostrar =  !this.mostrar;
   }
 
-  postDados(cadastro){
-    cadastro.value.linha;
-    cadastro.value.coluna;
-  }
-
   presentModal(cadastro) {
     let modal = this.modalCtrl.create(Modal,cadastro.value);
     modal.present();

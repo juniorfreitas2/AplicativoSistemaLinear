@@ -1,108 +1,108 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Sistema Linear</ion-title>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"> </ion-icon>
-    </button>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Sistema Linear</ion-title>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"> </ion-icon>
+        </button>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content >
-  <h5>Informe os valores da matriz</h5>
+    <h5>Informe os valores da matriz</h5>
 
-  <form [formGroup]="cadastro" (ngSubmit)="postDados(cadastro)" >
-    <ion-grid>
-      <ion-row align-items-start>
-        <ion-col class="col-3">
-           <ion-item>
-              <ion-label floating>x</ion-label>
-                <ion-input  formControlName="x1" [(ngModel)]="x1" type="number"></ion-input>
-            </ion-item>
-        </ion-col>
-      <ion-col class="col-3">
-         <ion-item>
-            <ion-label floating>y</ion-label>
-              <ion-input  formControlName="y1"  type="number"></ion-input>
-          </ion-item>
-      </ion-col>
-      <ion-col class="col-3">
-         <ion-item>
-            <ion-label floating>z</ion-label>
-              <ion-input formControlName="z1"  type="number"></ion-input>
-          </ion-item>
-      </ion-col>
-      <ion-col class="col-3">
-         <ion-item>
-            <ion-label floating >=</ion-label>
-              <ion-input formControlName="resultado1"  type="number"></ion-input>
-          </ion-item>
-      </ion-col>
-    </ion-row>
-      <ion-row align-items-start>
-        <ion-col class="col-3">
-           <ion-item>
-             <ion-label floating >x</ion-label>
-                <ion-input  formControlName="x2" type="number"></ion-input>
-            </ion-item>
-        </ion-col>
-      <ion-col class="col-3">
-         <ion-item>
-              <ion-label floating >y</ion-label>
-              <ion-input  formControlName="y2" type="number"></ion-input>
-          </ion-item>
-      </ion-col>
-      <ion-col class="col-3">
-         <ion-item>
-              <ion-label floating >z</ion-label>
-              <ion-input formControlName="z2"  type="number"></ion-input>
-          </ion-item>
-      </ion-col>
-      <ion-col class="col-3">
-         <ion-item>
-              <ion-label floating >=</ion-label>
-              <ion-input formControlName="resultado2"  type="number"></ion-input>
-          </ion-item>
-      </ion-col>
-
-
-      </ion-row>
+    <form [formGroup]="cadastro" >
+        <ion-grid>
+            <ion-row align-items-start>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating>x</ion-label>
+                        <ion-input  formControlName="x1" [(ngModel)]="x1" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating>y</ion-label>
+                        <ion-input  formControlName="y1"  type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating>z</ion-label>
+                        <ion-input formControlName="z1"  type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >=</ion-label>
+                        <ion-input formControlName="resultado1"  type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row align-items-start>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >x</ion-label>
+                        <ion-input  formControlName="x2" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >y</ion-label>
+                        <ion-input  formControlName="y2" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >z</ion-label>
+                        <ion-input formControlName="z2"  type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >=</ion-label>
+                        <ion-input formControlName="resultado2"  type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
 
 
-      <ion-row align-items-start>
-        <ion-col class="col-3">
-           <ion-item>
-             <ion-label floating >x</ion-label>
-                <ion-input   formControlName="x3" type="number"></ion-input>
-            </ion-item>
-        </ion-col>
+            </ion-row>
 
-        <ion-col class="col-3">
-           <ion-item>
-             <ion-label floating >y</ion-label>
-                <ion-input  formControlName="y3" type="number"></ion-input>
-            </ion-item>
-        </ion-col>
 
-        <ion-col class="col-3">
-           <ion-item>
-             <ion-label floating >z</ion-label>
-                <ion-input  formControlName="z3" type="number"></ion-input>
-            </ion-item>
-        </ion-col>
+            <ion-row align-items-start>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >x</ion-label>
+                        <ion-input   formControlName="x3" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
 
-        <ion-col class="col-3">
-           <ion-item>
-             <ion-label floating >=</ion-label>
-                <ion-input  formControlName="resultado3" type="number"></ion-input>
-            </ion-item>
-        </ion-col>
-      </ion-row>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >y</ion-label>
+                        <ion-input  formControlName="y3" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
 
-    </ion-grid>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >z</ion-label>
+                        <ion-input  formControlName="z3" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
 
-      <button  [disabled]="cadastro.invalid" ion-button full block (click)="presentModal(cadastro)">Resolver sistema</button>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >=</ion-label>
+                        <ion-input  formControlName="resultado3" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-  </form>
+        </ion-grid>
+
+        <button  [disabled]="cadastro.invalid" ion-button full block (click)="presentModal(cadastro)">Resolver sistema</button>
+
+    </form>
 
 
 
