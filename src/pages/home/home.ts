@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { ModalController, NavParams, NavController  } from 'ionic-angular';
 import {Validators, FormBuilder } from '@angular/forms';
+import { Storage } from '@ionic/storage';
 import { Modal } from '../modal/modal';
+import { Intro } from '../intro/intro';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +13,7 @@ export class HomePage {
     cadastro: any = {};
     mostrar: boolean= false;
 
-  constructor(public navCtrl: NavController, public FormBuilder: FormBuilder,public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public storage: Storage, public FormBuilder: FormBuilder,public modalCtrl: ModalController) {
     this.cadastro = this.FormBuilder.group({
       x1:['',Validators.required],
       y1:['',Validators.required],
@@ -27,6 +29,15 @@ export class HomePage {
       // y3:['',Validators.required],
       // z3:['',Validators.required],
       // resultado3:['',Validators.required]
+    });
+  }
+
+  ionViewDidLoad() {
+    this.storage.get('intro-done').then(done => {
+      if (!done) {
+        this.storage.set('intro-done', true);
+        this.navCtrl.setRoot(Intro);
+      }
     });
   }
 
