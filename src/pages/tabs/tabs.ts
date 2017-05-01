@@ -1,27 +1,21 @@
 import { Component } from '@angular/core';
-import { HomePage } from '../home/home';
-import { Tabs } from '../tabs/tabs';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
- * Generated class for the Intro page.
+ * Generated class for the Tabs page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-intro',
-  templateUrl: 'intro.html',
+  selector: 'page-tabs',
+  templateUrl: 'tabs.html',
 })
-export class Intro {
-
+export class Tabs {
+  tabHome: any = HomePage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-
-  navHome() {
-    this.navCtrl.setRoot(Tabs);
   }
 
 }

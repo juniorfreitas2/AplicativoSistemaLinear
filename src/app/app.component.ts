@@ -9,7 +9,7 @@ import { Intro } from '../pages/intro/intro';
   templateUrl: 'menu.html'
 })
 export class MyApp {
-  rootPage:any = Intro;
+  PageIntro:any = Intro;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
