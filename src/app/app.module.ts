@@ -8,6 +8,8 @@ import { Intro } from '../pages/intro/intro';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Tabs } from '../pages/tabs/tabs';
+import { Sobre } from '../pages/sobre/sobre';
+import { Contato } from '../pages/contato/contato';
 import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
@@ -16,7 +18,9 @@ import { IonicStorageModule } from '@ionic/storage';
         HomePage,
         Modal,
         Intro,
-        Tabs
+        Tabs,
+        Sobre,
+        Contato
     ],
     imports: [
         BrowserModule,
@@ -29,7 +33,9 @@ import { IonicStorageModule } from '@ionic/storage';
         HomePage,
         Modal,
         Intro,
-        Tabs
+        Tabs,
+        Sobre,
+        Contato
     ],
     providers: [
         StatusBar,
