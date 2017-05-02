@@ -61,6 +61,9 @@ export class Modal {
 
                     this.y = (this.f * this.a - this.d *this.c ) / (this.a * this.e - this.d * this.b);
                     this.x = (this.c - this.b * this.y) / this.a;
+                    
+                    this.y = Number(this.y.toFixed(2));
+                    this.x = Number(this.x.toFixed(2));
 
                     this.result2 = "Solução do sistema: X ="+this.x+" e Y =" +this.y;
 
