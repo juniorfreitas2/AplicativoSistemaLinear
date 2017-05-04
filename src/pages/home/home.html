@@ -13,19 +13,25 @@
                 <ion-col class="col-3">
                     <ion-item>
                         <ion-label floating>x</ion-label>
-                        <ion-input  formControlName="x1" [(ngModel)]="x1" type="number"></ion-input>
+                        <ion-input  formControlName="a1" [(ngModel)]="x1" type="number"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col class="col-3">
                     <ion-item>
                         <ion-label floating>y</ion-label>
-                        <ion-input  formControlName="y1"  type="number"></ion-input>
+                        <ion-input  formControlName="a2"  type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating>z</ion-label>
+                        <ion-input  formControlName="a3"  type="number"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col class="col-3">
                     <ion-item>
                         <ion-label floating >=</ion-label>
-                        <ion-input formControlName="resultado1"  type="number"></ion-input>
+                        <ion-input formControlName="d1"  type="number"></ion-input>
                     </ion-item>
                 </ion-col>
             </ion-row>
@@ -33,19 +39,25 @@
                 <ion-col class="col-3">
                     <ion-item>
                         <ion-label floating >x</ion-label>
-                        <ion-input  formControlName="x2" type="number"></ion-input>
+                        <ion-input  formControlName="b1" type="number"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col class="col-3">
                     <ion-item>
                         <ion-label floating >y</ion-label>
-                        <ion-input  formControlName="y2" type="number"></ion-input>
+                        <ion-input  formControlName="b2" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating>z</ion-label>
+                        <ion-input  formControlName="b3"  type="number"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col class="col-3">
                     <ion-item>
                         <ion-label floating >=</ion-label>
-                        <ion-input formControlName="resultado2"  type="number"></ion-input>
+                        <ion-input formControlName="d2"  type="number"></ion-input>
                     </ion-item>
                 </ion-col>
 
@@ -53,28 +65,33 @@
             </ion-row>
 
 
-            <!--<ion-row align-items-start>-->
-                <!--<ion-col class="col-3">-->
-                    <!--<ion-item>-->
-                        <!--<ion-label floating >x</ion-label>-->
-                        <!--<ion-input   formControlName="x3" type="number"></ion-input>-->
-                    <!--</ion-item>-->
-                <!--</ion-col>-->
+            <ion-row align-items-start>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >x</ion-label>
+                        <ion-input   formControlName="c1" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
 
-                <!--<ion-col class="col-3">-->
-                    <!--<ion-item>-->
-                        <!--<ion-label floating >y</ion-label>-->
-                        <!--<ion-input  formControlName="y3" type="number"></ion-input>-->
-                    <!--</ion-item>-->
-                <!--</ion-col>-->
-
-                <!--<ion-col class="col-3">-->
-                    <!--<ion-item>-->
-                        <!--<ion-label floating >=</ion-label>-->
-                        <!--<ion-input  formControlName="resultado3" type="number"></ion-input>-->
-                    <!--</ion-item>-->
-                <!--</ion-col>-->
-            <!--</ion-row>-->
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >y</ion-label>
+                        <ion-input  formControlName="c2" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating>z</ion-label>
+                        <ion-input  formControlName="c3"  type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-3">
+                    <ion-item>
+                        <ion-label floating >=</ion-label>
+                        <ion-input  formControlName="d3" type="number"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
         </ion-grid>
         <br>

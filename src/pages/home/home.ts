@@ -15,20 +15,21 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public storage: Storage, public FormBuilder: FormBuilder,public modalCtrl: ModalController) {
     this.cadastro = this.FormBuilder.group({
-      x1:['',Validators.required],
-      y1:['',Validators.required],
-      // z1:['',Validators.required],
-      resultado1:['',Validators.required],
+      a1:['',Validators.required],
+      a2:['',Validators.required],
+      a3:['',Validators.required],
+      d1:['',Validators.required],
 
-      x2:['',Validators.required],
-      y2:['',Validators.required],
-      // z2:['',Validators.required],
-      resultado2:['',Validators.required],
+      b1:['',Validators.required],
+      b2:['',Validators.required],
+      b3:['',Validators.required],
+      d2:['',Validators.required],
 
-      // x3:['',Validators.required],
-      // y3:['',Validators.required],
-      // z3:['',Validators.required],
-      // resultado3:['',Validators.required]
+      c1:['',Validators.required],
+      c2:['',Validators.required],
+      c3:['',Validators.required],
+      d3:['',Validators.required],
+
     });
   }
 
