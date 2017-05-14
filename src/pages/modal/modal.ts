@@ -37,23 +37,7 @@ export class Modal {
     multiplicador: number = 0;
     det:number = 0;
 
-    // array:Array<number> = [
-    //     this.a1,
-    //     this.a2,
-    //     this.a3,
-    //     this.d1,
-    //     this.b1,
-    //     this.b2,
-    //     this.b3,
-    //     this.d2,
-    //     this.c1,
-    //     this.c2,
-    //     this.c3,
-    //     this.d3
-    // ];
     coef_10:number; coef_20:number; coef_21:number;
-    i:number;j:number;
-    // reTipo = /^[+-]?((\d+|\d{1,3}(\.\d{3})+)(\,\d*)?|\,\d+)$/;
 
     resultado: string;
 
@@ -68,36 +52,51 @@ export class Modal {
 
     novoMetodo(){
 
-        this.coef_10 = -1.0 * this.b1 / this.a1;
-        this.coef_20 = -1.0 * this.c1 / this.a1;
-        //start primeiro for
-        this.b1 += this.coef_10 * this.a1;
-        this.c1 += this.coef_20 * this.a1;
+        this.det=((this.a1*this.b2*this.c3)+(this.b1*this.c2*this.a3)+(this.c1*this.a2*this.b3))-((this.b1*this.a2*this.c3)+(this.a1*this.c2*this.b3)+(this.c1*this.b2*this.a3));
+        if (this.det==0){
+            this.resultado = "O Sistema é impossível ou possui soluções infinitas!";
+        }
+        else {
 
-        this.b2 += this.coef_10 * this.a2;
-        this.c2 += this.coef_20 * this.a2;
+            // Calcula os dois coeficientes de triangularização respectivos aos elementos da primeira coluna do sistema
+            //start primeiro for
+            this.coef_10 = -1.0 * this.b1 / this.a1;
+            this.coef_20 = -1.0 * this.c1 / this.a1;
 
-        this.b3 += this.coef_10 * this.a3;
-        this.c3 += this.coef_20 * this.a3;
+            this.b1 += this.coef_10 * this.a1;
+            this.c1 += this.coef_20 * this.a1;
 
-        this.d2 += this.coef_10 * this.d1;
-        this.d3 += this.coef_20 * this.d1;
-        //end primeiro for
+            this.b2 += this.coef_10 * this.a2;
+            this.c2 += this.coef_20 * this.a2;
 
-        //start segundo for
-        this.coef_21 = -1.0 * this.c2 / this.b2;
-        this.c2 += this.coef_21 * this.b2;
+            this.b3 += this.coef_10 * this.a3;
+            this.c3 += this.coef_20 * this.a3;
 
-        this.c3 += this.coef_21 * this.b3;
+            this.d2 += this.coef_10 * this.d1;
+            this.d3 += this.coef_20 * this.d1;
+            //end primeiro for
 
-        this.d3 += this.coef_21 * this.d2;
-        //end segundo for
+            //Calcula o coeficiente de triangularização respectivo aos elementos da segunda coluna do sistema
+            //start segundo for
+            this.coef_21 = -1.0 * this.c2 / this.b2;
+            this.c2 += this.coef_21 * this.b2;
 
-        this.x = (this.d3) / this.c3;
-        this.y = (this.d2 - (this.x * this.b3)) / this.b2;
-        this.z = (this.d1 - (this.x * this.a3) - (this.y * this.a2)) / this.a1;
+            this.c3 += this.coef_21 * this.b3;
 
-        this.resultado = "\nRESULTADO:\nX = " + this.x + "\nY = " + this.y + "\nZ = " + this.z;
+            this.d3 += this.coef_21 * this.d2;
+            //end segundo for
+
+            //Determina a solução (variáveis x, y, z).
+            this.z = (this.d3) / this.c3;
+            this.y = (this.d2 - (this.z * this.b3)) / this.b2;
+            this.x = (this.d1 - (this.z * this.a3) - (this.y * this.a2)) / this.a1;
+
+            isNaN(this.z) == true ? this.z = 0: this.z = this.z;
+            isNaN(this.y) == true ? this.y = 0:  this.y = this.y;
+            isNaN(this.x) == true ? this.x = 0:  this.x= this.x;
+
+            this.resultado = "\nRESULTADO:\nX = " + this.x.toFixed(0) + "\nY = " + this.y.toFixed(0) + "\nZ = " + this.z.toFixed(0);
+        }
     }
     resolverSistema() {
         //calculando a determinante da matriz do sistema linear, para verificar se o sistema é SPD, SPI ou SI
